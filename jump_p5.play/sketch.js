@@ -38,7 +38,7 @@ function setup() {
 }
 
 function draw() {
-  background(255, 255, 255);
+  background(10, 20, 255);
 
   player.velocity.y += GRAVITY;
 
