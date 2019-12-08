@@ -2,13 +2,13 @@ let stripes = [];
 const stripes_w = 50;
 const stripes_h = 150;
 const stripes_d = 1;
-const stripes_count = 8;
+const stripes_count = 9;
 
 let speed = 5;
 
 
 function setup() {
-  createCanvas(windowWidth, windowHeight, WEBGL);
+  createCanvas(500, 700, WEBGL);
   background(255);
 	angleMode(DEGREES)
 	for(let i = 0; i < stripes_count; i++) {
@@ -22,12 +22,14 @@ function draw() {
 	translate(-width * 0.5, -height * 2, 0);
 	fill(230);
 	rect(width * 0, 0, width * 1, 4 * height);
+	push();
+	rotateX(15);
 	rotateX(-90)
 	fill(179, 220, 255);
-	rect(-500, -600, width+1000, 600);
-	rotateX(90)
+	rect(-width * 2, -height * 2, width * 5, height * 2);
+	pop();
+
 	fill(240);
-	
 	for(let i = 0; i < stripes_count; i++) {
 		push();
 		translate(width * 0.5, stripes[i], 0);
