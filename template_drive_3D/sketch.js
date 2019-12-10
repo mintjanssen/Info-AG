@@ -9,7 +9,6 @@ let speed = 5;
 
 function setup() {
   createCanvas(500, 700, WEBGL);
-  background(255);
 	angleMode(DEGREES)
 	for(let i = 0; i < stripes_count; i++) {
 		stripes[i] = -height + i * stripes_h * 2;
@@ -21,7 +20,7 @@ function draw() {
 	rotateX(75);
 	translate(-width * 0.5, -height * 2, 0);
 	fill(230);
-	rect(width * 0, 0, width * 1, 4 * height);
+	rect(0, 0, width * 1, 4 * height);
 	push();
 	rotateX(15);
 	rotateX(-90)
