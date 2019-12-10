@@ -41,6 +41,6 @@ function draw() {
 	}
 	
 	fill(0, 200, 0);
-	translate(width * 0.5 + sin(frameCount % 360) * (width * 0.5 - 80), height * 2.5, 0)
-	box(80, 120, 80);
+	translate(width * 0.5 + sin(frameCount % 360) * (width * 0.5 - 80), height * 2.5, 30)
+	box(80, 120, 60);
 }
