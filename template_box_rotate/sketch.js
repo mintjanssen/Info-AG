@@ -11,16 +11,17 @@ function setup() {
 		left_rotation : false,
 		angle: 360,
 		size : 80,
+		speed : 3,
 		
 		update : function() {
 			if(this.right_rotation) {
-				this.angle += 3;
+				this.angle += this.speed;
 				if(this.angle >= this.direction * 90) {
 					this.right_rotation = false;
 					this.angle = this.direction * 90;
 				}
 			} else if(this.left_rotation) {
-				this.angle -= 3;
+				this.angle -= this.speed;
 				if(this.angle <= this.direction * 90) {
 					this.left_rotation = false;
 					this.angle = this.direction * 90;
