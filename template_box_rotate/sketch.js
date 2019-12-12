@@ -2,7 +2,7 @@ let box;
 
 
 function setup() {
-  createCanvas(windowWidth, windowHeight);
+  	createCanvas(windowWidth, windowHeight);
 	angleMode(DEGREES)
 	
 	box = {
