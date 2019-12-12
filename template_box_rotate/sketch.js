@@ -6,11 +6,11 @@ function setup() {
 	angleMode(DEGREES)
 	
 	box = {
-		direction : 4,
+		direction : 0,
 		right_rotation : false,
 		left_rotation : false,
-		angle: 360,
-		size : 80,
+		angle: 0,
+		size : 100,
 		speed : 3,
 		
 		update : function() {
@@ -30,15 +30,15 @@ function setup() {
 				if(mouseIsPressed && mouseX > width * 0.5) {
 					this.right_rotation = true;
 					this.direction += 1;
-					if(this.direction > 4) {
-						this.direction = 1;
+					if(this.direction > 3) {
+						this.direction = 0;
 						this.angle -= 360;
 					}
 				} else if(mouseIsPressed && mouseX < width * 0.5) {
 					this.left_rotation = true;
 					this.direction -= 1;
-					if(this.direction < 1) {
-						this.direction = 4;
+					if(this.direction < 0) {
+						this.direction = 3;
 						this.angle += 360;
 					}
 				}
