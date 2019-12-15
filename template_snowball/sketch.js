@@ -314,7 +314,6 @@ class Ball {
 		let scale = map(this.h, 0, 250, 1, 2);
 		ellipse(0, 0, this.size * 2 * scale);
 		pop();
-		text(this.h, 10, 30)
 	}
 }
 
