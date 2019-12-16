@@ -11,13 +11,13 @@ function setup() {
 	angleMode(DEGREES)
 	
 	player1 = {
-		x : width * 0.5,
-		y : height * 0.5,
+		x : width * 0.1,
+		y : height * 0.1,
 		size : width * 0.05,
 		velx : 0,
 		vely : 0, 
 		friction : 0.9,
-		direction : 360,
+		direction : 135,
 		moving : false,
 		carryball : true,
 
@@ -25,9 +25,9 @@ function setup() {
 			push();
 			translate(this.x, this.y);
 			rotate(this.direction);
-			let sizetri = this.size * 0.6;
-			triangle(-sizetri, sizetri, sizetri, sizetri, 0, -sizetri * 2.8);
 			ellipse(0, 0, this.size * 2);
+			let sizetri = this.size * 0.6;
+			triangle(-sizetri, sizetri, sizetri, sizetri, 0, -sizetri * 1.4);
 			pop();
 		},
 
@@ -118,13 +118,13 @@ function setup() {
 	}
 
 	player2 = {
-		x : width * 0.5,
-		y : height * 0.8,
+		x : width * 0.9,
+		y : height * 0.9,
 		size : width * 0.05,
 		velx : 0,
 		vely : 0, 
 		friction : 0.9,
-		direction : 0,
+		direction : 315,
 		moving : false,
 		carryball : true,
 
@@ -132,9 +132,9 @@ function setup() {
 			push();
 			translate(this.x, this.y);
 			rotate(this.direction);
-			let sizetri = this.size * 0.6;
-			triangle(-sizetri, sizetri, sizetri, sizetri, 0, -sizetri * 2.8);
 			ellipse(0, 0, this.size * 2);
+			let sizetri = this.size * 0.6;
+			triangle(-sizetri, sizetri, sizetri, sizetri, 0, -sizetri * 1.4);
 			pop();
 		},
 
@@ -280,8 +280,9 @@ function draw() {
 		}
 	}
 	
-	if(player1_hit || player2_hit)
-		text("Treffer", 10, 50);
+	if(player1_hit || player2_hit) {
+		background(200, 0, 0)
+	}
 }
 
 
